@@ -17,13 +17,3 @@ let species =
 
 for (species, name, type_) in species do
   printfn "%s, %s (%s)" species name type_
-
-printfn "\n==========\n"
-
-let third (_, _, c) = c
-
-let speciesSorted =
-  species |> List.countBy third |> List.sortByDescending snd
-
-for (type_, count) in speciesSorted do
-  printfn "%s -> %d" type_ count
