@@ -7,4 +7,4 @@ To run this script:
 *)
 
 let _ =
-  [| for i in 0..4 -> printfn "Hello World" |]
+  [ for i in 1..5 -> printfn "Hello World %d" i ]
