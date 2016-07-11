@@ -6,6 +6,7 @@ How to use .NET libraries.
 open System.IO
 open System.Net
 
+
 let http (url: string) =
   let req = WebRequest.Create(url)
   let resp = req.GetResponse()
@@ -15,4 +16,5 @@ let http (url: string) =
   resp.Close()
   html
 
-let _ = printfn "%s" <| http "http://ipecho.net/plain"
+
+printfn "%s" <| http "http://ipecho.net/plain"
