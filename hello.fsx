@@ -6,5 +6,4 @@ To run this script:
 
 *)
 
-let _ =
-  [ for i in 1..5 -> printfn "Hello World %d" i ]
+[ for i in 1..5 -> printfn "Hello World %d" i ]
