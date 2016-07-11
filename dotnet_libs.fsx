@@ -10,4 +10,4 @@ let http (url: string) =
   resp.Close()
   html
 
-let _ = printfn "%s" (http "http://ipecho.net/plain")
+let _ = printfn "%s" <| http "http://ipecho.net/plain"
