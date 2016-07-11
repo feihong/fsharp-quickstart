@@ -15,18 +15,19 @@ type Species = HtmlProvider<"https://en.wikipedia.org/wiki/The_world%27s_100_mos
 
 let speciesTypes =
   [ for x in Species.GetSample().Tables.``Species list``.Rows -> x.Type ]
-let speciesTypesSorted =
+let stats =
   speciesTypes |> List.countBy id |> List.sortByDescending snd
 
-for (type_, count) in speciesTypesSorted do
-  printfn "%s -> %d" type_ count
+//for (type_, count) in stats do
+//  printfn "%s -> %d" type_ count
 
 
-(*
 let html =
-  [ yield "<html><body><table><thead><tr><th>Species</th></tr><tbody>"
-    for (species, commonName, speciesType) do
+  [ yield "<html><head><title>Threatened Animals</title></head>"
+    yield "<body><ul>"
+    for (type_, count) in stats do
+      yield sprintf "<li>%s -> %d</li>" type_ count
+    yield "</ul></body></html>"
+  ] |> String.concat "\n"
 
-    yield "</tbody></body></html>"
-  ]
-*)
+printfn "%s" html
