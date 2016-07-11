@@ -18,16 +18,20 @@ let speciesTypes =
 let stats =
   speciesTypes |> List.countBy id |> List.sortByDescending snd
 
-//for (type_, count) in stats do
-//  printfn "%s -> %d" type_ count
-
-
 let html =
-  [ yield "<html><head><title>Threatened Animals</title></head>"
-    yield "<body><ul>"
+  [ yield "<html><head><title>Threatened Animals</title>"
+    yield "<style>
+      table { border-collapse: collapse; }
+      td, th { border: 1px solid gray; }
+      </style></head>"
+    yield "<body><table><thead><tr>"
+    yield "<th>Category</th>"
+    yield "<th>Number</th>"
+    yield "</tr><tbody>"
     for (type_, count) in stats do
-      yield sprintf "<li>%s -> %d</li>" type_ count
-    yield "</ul></body></html>"
+      yield sprintf "<tr><td>%s</td> <td>%d</td></tr>" type_ count
+    yield "</tbody></table>"
+    yield "</body></html>"
   ] |> String.concat "\n"
 
-printfn "%s" html
+startWebServer defaultConfig (Successful.OK html)
