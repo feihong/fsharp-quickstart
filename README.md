@@ -12,12 +12,20 @@ apt install mono-complete fsharp
 
 The easiest thing to do is just install [Xamarin Studio](http://xamarin.com/studio).
 
+## Install Paket (dependency manager)
+
+```
+git clone git@github.com:fsprojects/Paket
+cd Paket
+./build.sh
+sudo ./install.sh
+```
+
 ## Run script
 
 ```
 fsharpi hello.fsx
 ```
-
 
 ## Compiling and running
 
