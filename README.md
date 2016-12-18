@@ -1,6 +1,8 @@
 # F# Quickstart
 
-## Linux installation
+## Installation
+
+### Linux installation
 
 As of July 2016, you can install Mono 4.2.1 using apt on Ubuntu 16.04. Latest version of Mono is 4.4.1.
 
@@ -8,7 +10,7 @@ As of July 2016, you can install Mono 4.2.1 using apt on Ubuntu 16.04. Latest ve
 apt install mono-complete fsharp
 ```
 
-## Mac installation
+### Mac installation
 
 The easiest thing to do is just install [Xamarin Studio](http://xamarin.com/studio).
 
@@ -33,3 +35,14 @@ fsharpi hello.fsx
 fsharpc -o hello.exe hello.fs
 mono hello.exe
 ```
+
+## Editor
+
+Open Atom and install the `ionide-fsharp` and `ionide-paket` packages.
+
+On Mac, make sure that the Mono Path field is set to `/usr/local/bin`, then restart Atom.
+
+## Sources
+
+- [Paket Installation Options](https://fsprojects.github.io/Paket/installation.html)
+- ['mono' could not be spawned](https://github.com/ionide/ionide-atom-fsharp/issues/128)
