@@ -42,6 +42,12 @@ Open Atom and install the `ionide-fsharp` and `ionide-paket` packages.
 
 On Mac, make sure that the Mono Path field is set to `/usr/local/bin`, then restart Atom.
 
+## Upgrading Mono
+
+### Mac
+
+Open Xamarin Studio and select `Check for Updates...` from the menu. Will probably take a long time, as it will download all dependencies before starting the installation process.
+
 ## Sources
 
 - [Paket Installation Options](https://fsprojects.github.io/Paket/installation.html)
