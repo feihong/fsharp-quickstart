@@ -21,11 +21,13 @@ Source: [Use F# on Mac](http://fsharp.org/use/mac/)
 ## Install Paket (dependency manager)
 
 ```
-git clone git@github.com:fsprojects/Paket
-cd Paket
-./build.sh
-sudo ./install.sh
+mdkir .paket
+wget https://github.com/fsprojects/Paket/releases/download/latest/paket.bootstrapper.exe -P .paket
+.paket/packet.bootstrapper.exe
+# Commit .paket/paket.bootstrapper.exe into your repo and add .paket/paket.exe to your .gitignore file
 ```
+
+Note: There is a way to install Paket globally, but this is not standard practice and involves compiling the binary yourself, which is not recommended.
 
 ## Run script
 
