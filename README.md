@@ -22,10 +22,12 @@ Source: [Use F# on Mac](http://fsharp.org/use/mac/)
 
 ```
 mdkir .paket
-wget https://github.com/fsprojects/Paket/releases/download/latest/paket.bootstrapper.exe -P .paket
+wget https://github.com/fsprojects/Paket/releases/download/3.35.3/paket.bootstrapper.exe -P .paket
 .paket/packet.bootstrapper.exe
 # Commit .paket/paket.bootstrapper.exe into your repo and add .paket/paket.exe to your .gitignore file
 ```
+
+Visit the [latest release page](https://github.com/fsprojects/Paket/releases/latest) to get the current link for `paket.bootstrapper.exe`.
 
 Note: There is a way to install Paket globally, but this is not standard practice and involves compiling the binary yourself, which is not recommended.
 
