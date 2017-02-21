@@ -14,7 +14,7 @@ apt install mono-complete fsharp
 
 - Install [Visual Studio Code]()
 - Add Mono `/bin` to PATH: `export PATH=$PATH:/Library/Frameworks/Mono.framework/Versions/Current/bin/`
-- Go back to VS Code, press Cmd+P and enter: `ext install Ionide-fsharp`
+- Go back to VS Code, press `Cmd+P` and enter: `ext install Ionide-fsharp`
 
 Source: [Use F# on Mac](http://fsharp.org/use/mac/)
 
