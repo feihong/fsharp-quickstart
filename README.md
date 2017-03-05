@@ -45,11 +45,11 @@ fsharpc -o hello.exe hello.fs
 mono hello.exe
 ```
 
-## Editor
+## Visual Studio Code
 
-Open Atom and install the `ionide-fsharp` and `ionide-paket` packages.
+### Execute code in F# Interactive
 
-On Mac, make sure that the Mono Path field is set to `/usr/local/bin`, then restart Atom.
+Highlight the section of code you wish to send to FSI and then type `Alt+Enter`.
 
 ## Upgrading Mono
 
