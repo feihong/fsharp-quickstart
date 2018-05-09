@@ -1,19 +1,15 @@
 # F# Quickstart
 
-## Installation
+## Install Mono and F#
 
 ### Linux installation
 
-As of July 2016, you can install Mono 4.2.1 using apt on Ubuntu 16.04. Latest version of Mono is 4.4.1.
-
-```
-apt install mono-complete fsharp
-```
+    apt install mono-complete fsharp
 
 ### Mac installation
 
+- `brew install mono`
 - Install [Visual Studio Code]()
-- Add Mono `/bin` to PATH: `export PATH=$PATH:/Library/Frameworks/Mono.framework/Versions/Current/bin/`
 - Go back to VS Code, press `Cmd+P` and enter: `ext install Ionide-fsharp`
 
 Source: [Use F# on Mac](http://fsharp.org/use/mac/)
