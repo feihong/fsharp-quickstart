@@ -2,11 +2,11 @@
 
 Before you try to run this script, you must first download the required packages:
 
-  paket install
+  mono .paket/paket.exe install
 
 *)
-#r "packages/FSharp.Data/lib/net40/FSharp.Data.dll"
-#r "packages/Suave/lib/net40/Suave.dll"
+#r "packages/FSharp.Data/lib/net45/FSharp.Data.dll"
+#r "packages/Suave/lib/net461/Suave.dll"
 
 open FSharp.Data
 open Suave
@@ -34,4 +34,10 @@ let html =
     yield "</body></html>"
   ] |> String.concat "\n"
 
-startWebServer defaultConfig (Successful.OK html)
+let config =
+  { defaultConfig with
+      bindings = [ HttpBinding.createSimple HTTP "127.0.0.1" 8000 ]
+  }
+
+let _ =
+  startWebServer config (Successful.OK html)

@@ -2,7 +2,7 @@
 
 Before you try to run this script, you must first download the required packages:
 
-  paket install
+  mono .paket/paket.exe install
 
 *)
 #r "packages/FSharp.Data/lib/net40/FSharp.Data.dll"
