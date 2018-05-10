@@ -8,8 +8,8 @@
 
 ### Mac installation
 
-- `brew install mono`
-- Install [Visual Studio Code]()
+- Install [Mono using Mac package](http://www.mono-project.com/download/stable/) (the version in Homebrew is older)
+- Install [Visual Studio Code](https://code.visualstudio.com/download)
 - Go back to VS Code, press `Cmd+P` and enter: `ext install Ionide-fsharp`
 
 Source: [Use F# on Mac](http://fsharp.org/use/mac/)
@@ -17,16 +17,18 @@ Source: [Use F# on Mac](http://fsharp.org/use/mac/)
 ## Install Paket (dependency manager)
 
 ```
-mdkir .paket
-wget https://github.com/fsprojects/Paket/releases/download/3.35.3/paket.bootstrapper.exe -P .paket
-mono .paket/packet.bootstrapper.exe
+mkdir .paket
+wget https://github.com/fsprojects/Paket/releases/download/5.161.3/paket.bootstrapper.exe -O .paket/paket.exe
+mono .paket/paket.exe install
 ```
 
-Commit `.paket/paket.bootstrapper.exe` into your repo and add `.paket/paket.exe` to your .gitignore file
+Commit `.paket/paket.exe` into your repo.
 
 Visit the [latest release page](https://github.com/fsprojects/Paket/releases/latest) to get the current link for `paket.bootstrapper.exe`.
 
 Note: There is a way to install Paket globally, but this is not standard practice and involves compiling the binary yourself, which is not recommended.
+
+Source: [Paket Manual Setup](https://fsprojects.github.io/Paket/getting-started.html#Manual-setup)
 
 ## Run script
 
@@ -46,12 +48,6 @@ mono hello.exe
 ### Execute code in F# Interactive
 
 Highlight the section of code you wish to send to FSI and then type `Alt+Enter`.
-
-## Upgrading Mono
-
-### Mac
-
-Open Xamarin Studio and select `Check for Updates...` from the menu. Will probably take a long time, as it will download all dependencies before starting the installation process.
 
 ## Sources
 

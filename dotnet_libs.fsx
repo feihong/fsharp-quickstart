@@ -16,5 +16,5 @@ let http (url: string) =
   resp.Close()
   html
 
-
-printfn "%s" <| http "http://ipecho.net/plain"
+let _ =
+  printfn "%s" <| http "http://ipecho.net/plain"

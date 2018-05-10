@@ -1,3 +1,4 @@
 *.exe
 packages/*
+paket-files
 *.dll
