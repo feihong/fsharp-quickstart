@@ -1,4 +1,7 @@
+packages/
+bin/
+obj/
+
 *.exe
-packages/*
 paket-files
 *.dll
