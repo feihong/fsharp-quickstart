@@ -37,9 +37,15 @@ dotnet fsi hello.fsx
 
 Create new project
 
-```
-dotnet new console --language F#
-```
+    dotnet new console --language F#
+
+Build
+
+    dotnet build
+
+Run
+
+    dotnet run
 
 ## Visual Studio Code
 
