@@ -14,7 +14,7 @@
 
 Source: [Use F# on Mac](http://fsharp.org/use/mac/)
 
-## Install Paket (dependency manager)
+## Paket (dependency manager)
 
 Install Packet locally:
 
@@ -26,6 +26,14 @@ dotnet tool install Paket
 Make sure to commit `.config/dotnet-tools.json`.
 
 Source: [Paket installation](https://fsprojects.github.io/Paket/installation.html)
+
+Create `paket.dependencies` file
+
+    dotnet paket init
+
+Install dependencies
+
+    dotnet paket install
 
 ## Run script
 

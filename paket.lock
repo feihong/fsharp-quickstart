@@ -1,9 +1,0 @@
-RESTRICTION: || (== net461) (== netcoreapp2.0) (== netstandard2.0)
-NUGET
-  remote: https://api.nuget.org/v3/index.json
-    FSharp.Core (4.3.4)
-    FSharp.Data (2.4.6)
-      Zlib.Portable (>= 1.11) - restriction: || (&& (== net461) (< net40)) (== netcoreapp2.0) (== netstandard2.0)
-    Suave (2.4)
-      FSharp.Core (>= 4.0 < 5.0)
-    Zlib.Portable (1.11) - restriction: || (&& (== net461) (< net40)) (== netcoreapp2.0) (== netstandard2.0)
