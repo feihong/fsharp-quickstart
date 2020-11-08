@@ -2,9 +2,9 @@
 
 To run this script:
 
-  fsharpi hello.fsx
+  dotnet fsi hello.fsx
 
 *)
 
 for i in 1..5 do
-    printfn "Hello World %d" i
+  printfn "你好世界 %d" i
