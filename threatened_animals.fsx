@@ -2,10 +2,10 @@
 
 Before you try to run this script, you must first download the required packages:
 
-  mono .paket/paket.exe install
+  dotnet paket install
 
 *)
-#r "packages/FSharp.Data/lib/net40/FSharp.Data.dll"
+#r "packages/FSharp.Data/lib/net45/FSharp.Data.dll"
 
 open FSharp.Data
 
