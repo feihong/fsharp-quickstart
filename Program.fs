@@ -1,4 +1,6 @@
 ﻿open System
+open System.Drawing
+open Colorful   // third party library
 
 let rand = System.Random()
 
@@ -9,7 +11,8 @@ let getRandomHanzi () =
 
 [<EntryPoint>]
 let main argv =
-  printfn "你好世界！\nHere are some random characters:"
+  Console.WriteLine("你好世界！\n", Color.Green);
+  printfn "Here are some random characters:"
 
   for i = 1 to 10 do
     printfn "%s" (getRandomHanzi ())

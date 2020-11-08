@@ -27,13 +27,17 @@ Make sure to commit `.config/dotnet-tools.json`.
 
 Source: [Paket installation](https://fsprojects.github.io/Paket/installation.html)
 
-Create `paket.dependencies` file
+Create `paket.dependencies` file:
 
     dotnet paket init
 
-Install dependencies
+Install dependencies:
 
     dotnet paket install
+
+Add package to a project:
+
+    dotnet add fsharp-quickstart.fsproj package Colorful.Console
 
 ## Run script
 
@@ -63,4 +67,4 @@ Highlight the section of code you wish to send to FSI and then type `Alt+Enter`.
 
 ## Sources
 
-tbd
+- [Get started with F# with the .NET Core CLI](https://docs.microsoft.com/en-us/dotnet/fsharp/get-started/get-started-command-line)
