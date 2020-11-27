@@ -4,3 +4,4 @@ nuget FSharp.Core
 nuget FSharp.Data
 nuget Suave
 nuget Colorful.Console
+nuget Fake.Core.Process
