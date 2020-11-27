@@ -1,3 +1,4 @@
+// #r "nuget: FSharp.Data" // works on .NET 5, but is noticeably slower
 #r "packages/FSharp.Data/lib/net45/FSharp.Data.dll"
 
 open FSharp.Data

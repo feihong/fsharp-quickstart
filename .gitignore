@@ -2,6 +2,7 @@ packages/
 bin/
 obj/
 paket-files/
+.paket
 
 *.exe
 *.dll
