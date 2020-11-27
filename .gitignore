@@ -6,3 +6,4 @@ paket-files/
 
 *.exe
 *.dll
+temp.json
