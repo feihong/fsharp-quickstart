@@ -8,8 +8,8 @@ type Tracks = JsonProvider<"""
   {
     "title": "TITLE",
     "artist": "ARTIST",
-    "link": "https://example.com/hello/",
-    "genre": "GENRE"
+    "genre": "GENRE",
+    "link": "https://example.com/hello/"
   }
 ]
 """>
@@ -31,11 +31,14 @@ let tracks = Tracks.Parse("""
   {
     "title": "昆仑山牧人",
     "artist": "Haya乐团xYamy郭颖",
-    "link": "https://www.youtube.com/watch?v=HlWoGe7zQZs",
-    "genre": "世界音乐"
+    "link": "https://www.youtube.com/watch?v=HlWoGe7zQZs"
   }
 ]
 """)
 
 for track in tracks do
-  printfn "%s by %s (%s)" track.Title track.Artist track.Genre
+  let genre =
+    match track.Genre with
+    | "" -> "N/A"
+    | genre -> genre
+  printfn "%s by %s (%s)" track.Title track.Artist genre
