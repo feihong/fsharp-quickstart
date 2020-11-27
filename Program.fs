@@ -9,21 +9,32 @@ let getRandomHanzi =
     |> Convert.ToChar
     |> Convert.ToString
 
-let makeListBy n fn =
+let makeListUsingGenerator n fn =
   let generator = fun i ->
     if i = n then None
-    else Some (fn i, i+1)
+    else Some (fn i, i + 1)
+
   List.unfold generator 0
+
+let parseInt s =
+  try
+    Some (int s)
+  with
+  | :? System.FormatException -> None
 
 [<EntryPoint>]
 let main argv =
   Console.WriteLine("你好世界！\n", Color.Green);
   printfn "Here are some random characters:"
 
-  let hanziList = makeListBy 12 (fun _ -> getRandomHanzi ())
+  let count =
+    match argv with
+    | [|n|] -> parseInt n |> Option.defaultValue 8
+    | _ -> 8
+
+  let hanziList = makeListUsingGenerator count (fun _ -> getRandomHanzi ())
   Console.WriteLine(hanziList |> String.concat ", ", Color.Yellow)
 
-//   for i = 1 to 10 do
-//     printfn "%s" (getRandomHanzi ())
+  Console.WriteLine([for _ in 1 .. count -> getRandomHanzi ()] |> String.concat ", ", Color.Cyan)
 
-  0 // return an integer exit code
+  0 // optionally return an integer exit code
