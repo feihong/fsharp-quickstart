@@ -68,3 +68,4 @@ Highlight the section of code you wish to send to FSI and then type `Alt+Enter`.
 ## Sources
 
 - [Get started with F# with the .NET Core CLI](https://docs.microsoft.com/en-us/dotnet/fsharp/get-started/get-started-command-line)
+- [Interactive programming with F#](https://docs.microsoft.com/en-us/dotnet/fsharp/tools/fsharp-interactive/)
