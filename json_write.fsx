@@ -16,7 +16,7 @@ let tracks: Track list = [
     artist = "梦离子 ᴍ∞ɴʀɪᴢᴇ";
     genre = "电子 Electronica";
     link = Some "https://youtu.be/Ah5nnELYfXQ";
-  };
+  }
   {
     title = "扯谎哥";
     artist = "阿朵";

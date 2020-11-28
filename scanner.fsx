@@ -59,5 +59,11 @@ type State = {
   errors: string list
 }
 
+let scanTokens text =
+  [LeftParen; RightParen; LeftBrace; RightBrace;]
 
-printfn "hey"
+let run text =
+  for token in scanTokens text do
+    printfn "%A" token
+
+run "( ) [ ]"
