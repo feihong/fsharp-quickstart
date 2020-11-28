@@ -25,16 +25,17 @@ let parseInt s =
 [<EntryPoint>]
 let main argv =
   Console.WriteLine("你好世界！\n", Color.Green);
-  printfn "Here are some random characters:"
 
   let count =
     match argv with
     | [|n|] -> parseInt n |> Option.defaultValue 8
     | _ -> 8
 
+  printfn "Generate %d random characters:" count
+
+  Console.WriteLine(seq {for _i in 1 .. count -> getRandomHanzi ()} |> String.concat ", ", Color.Cyan)
+
   let hanziList = makeListUsingGenerator count (fun _ -> getRandomHanzi ())
   Console.WriteLine(hanziList |> String.concat ", ", Color.Yellow)
-
-  Console.WriteLine([for _ in 1 .. count -> getRandomHanzi ()] |> String.concat ", ", Color.Cyan)
 
   0 // optionally return an integer exit code
