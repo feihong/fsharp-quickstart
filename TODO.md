@@ -1,5 +1,4 @@
 # TODO
 
-- Creating zip file
-- Loading modules from another script file
+- Hanziconv port
 - SQL type provider
