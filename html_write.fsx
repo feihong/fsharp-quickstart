@@ -28,9 +28,6 @@ type Tracks = JsonProvider<"""
 ]
 """>
 
-// for track in Tracks.GetSamples() do
-//   printfn "%s by %s (%s)" track.Title track.Artist track.Genre
-
 let cellStyle = _style "padding: 0.5rem; border: 1px solid gray;"
 
 let page =
@@ -63,8 +60,6 @@ let page =
       ]
     ]
   ]
-
-// printfn "%s" (RenderView.AsString.htmlDocument page)
 
 let output = RenderView.AsString.htmlDocument page
 File.WriteAllText("temp.html", output)
