@@ -1,3 +1,5 @@
+.DS_Store
+
 packages/
 bin/
 obj/
@@ -6,5 +8,4 @@ paket-files/
 
 *.exe
 *.dll
-temp.json
-temp.html
+temp.*
