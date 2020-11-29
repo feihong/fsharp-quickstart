@@ -22,9 +22,11 @@ let private convert (text:string) direction =
     | SimplifiedToTraditional -> CharMap.simplified, CharMap.traditional
   let sb = StringBuilder()
   for c in text do
-    match fromMap.IndexOf(c) with
-    | -1 -> sb.Append c |> ignore
-    | index -> sb.Append (toMap.[index]) |> ignore
+    let c =
+      match fromMap.IndexOf(c) with
+      | -1 -> c
+      | index -> toMap.[index]
+    sb.Append c |> ignore
   sb.ToString()
 
 let toSimplified text =
