@@ -20,13 +20,14 @@ let private convert (text:string) direction =
     match direction with
     | TraditionalToSimplified -> CharMap.traditional, CharMap.simplified
     | SimplifiedToTraditional -> CharMap.simplified, CharMap.traditional
-  let sb = StringBuilder()
-  for c in text do
+  // The for loop version is better, but let's see how you could do it with Seq.fold:
+  let folder (sb: StringBuilder) (c: char) =
     let c =
       match fromMap.IndexOf(c) with
       | -1 -> c
       | index -> toMap.[index]
-    sb.Append c |> ignore
+    sb.Append c
+  let sb = Seq.fold folder (StringBuilder ()) text
   sb.ToString()
 
 let toSimplified text =
