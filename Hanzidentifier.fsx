@@ -1,6 +1,6 @@
 (*
 
-Port of Python hanzidentifier library: https://github.com/tsroten/hanzidentifier
+Port of Python library hanzidentifier: https://github.com/tsroten/hanzidentifier
 
 *)
 
