@@ -3,6 +3,7 @@
 Port of Python library hanziconv: https://github.com/berniey/hanziconv
 
 *)
+open System.Text
 
 module private CharMap =
   // https://github.com/berniey/hanziconv/blob/master/hanziconv/charmap.py
@@ -14,15 +15,20 @@ type Direction =
   | TraditionalToSimplified
   | SimplifiedToTraditional
 
-let private convert text direction =
+let private convert (text:string) direction =
   let fromMap, toMap =
     match direction with
     | TraditionalToSimplified -> CharMap.traditional, CharMap.simplified
     | SimplifiedToTraditional -> CharMap.simplified, CharMap.traditional
-  "what"
+  let sb = StringBuilder()
+  for c in text do
+    match fromMap.IndexOf(c) with
+    | -1 -> sb.Append c |> ignore
+    | index -> sb.Append (toMap.[index]) |> ignore
+  sb.ToString()
 
 let toSimplified text =
-  text
+  convert text TraditionalToSimplified
 
 let toTraditional text =
-  text
+  convert text SimplifiedToTraditional
